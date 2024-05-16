@@ -10,6 +10,7 @@ import Clock from './04.엘리먼트랜더링/Clock';
 import PropsEx from './05.컴포넌트와props/PropsEx';
 import CommentList from './05.컴포넌트와props/CommentList';
 import BoardList from './05.컴포넌트와props_게시판/BoardList';
+import NotificationList from './06.State와생명주기/NotificationList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -27,7 +28,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     {/* <ConfirmDialog /> */}
     {/* <PropsEx /> */}
     {/* <CommentList /> */}
-    <BoardList />
+    {/* <BoardList /> */}
+
+    <NotificationList />
   </React.StrictMode>
 )
 
