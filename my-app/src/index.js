@@ -7,17 +7,26 @@ import reportWebVitals from './reportWebVitals';
 import Library from './03.JSX소개/Library';
 import ConfirmDialog from './04.엘리먼트랜더링/ConfirmDialog';
 import Clock from './04.엘리먼트랜더링/Clock';
+import PropsEx from './05.컴포넌트와props/PropsEx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-setInterval(() =>{
+
+// setInterval(() =>{
+//   root.render(
+//     <React.StrictMode>
+//       <Clock />
+//     </React.StrictMode>
+//   )
+// }, 1000)
+
   root.render(
   <React.StrictMode>
     {/* <Library /> */}
     {/* <ConfirmDialog /> */}
-    <Clock />
+    <PropsEx />
   </React.StrictMode>
-);
-}, 1000)
+)
+
 
 
 // If you want to start measuring performance in your app, pass a function
