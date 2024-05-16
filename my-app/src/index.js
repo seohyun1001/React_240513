@@ -8,6 +8,7 @@ import Library from './03.JSX소개/Library';
 import ConfirmDialog from './04.엘리먼트랜더링/ConfirmDialog';
 import Clock from './04.엘리먼트랜더링/Clock';
 import PropsEx from './05.컴포넌트와props/PropsEx';
+import CommentList from './05.컴포넌트와props/CommentList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -23,7 +24,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
   <React.StrictMode>
     {/* <Library /> */}
     {/* <ConfirmDialog /> */}
-    <PropsEx />
+    {/* <PropsEx /> */}
+    <CommentList />
   </React.StrictMode>
 )
 
