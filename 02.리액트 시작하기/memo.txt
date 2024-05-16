@@ -1,0 +1,15 @@
+프로젝트 생성
+create-react-app (project name)
+
+change directory
+cd (project name)
+
+해당 디렉토리 실행
+npm start
+
+상위 디렉토리로 가기
+cd..
+
+종료
+ctrl + c
+-> 일괄 작업을 끝내시겠습니까 (Y/N) = y

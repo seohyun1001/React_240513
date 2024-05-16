@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import Library from './03.JSX소개/Library';
+import ConfirmDialog from './04.엘리먼트랜더링/ConfirmDialog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Library />
+    {/* <Library /> */}
+    <ConfirmDialog />
   </React.StrictMode>
 );
 
