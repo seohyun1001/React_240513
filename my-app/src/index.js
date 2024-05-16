@@ -6,14 +6,19 @@ import reportWebVitals from './reportWebVitals';
 
 import Library from './03.JSX소개/Library';
 import ConfirmDialog from './04.엘리먼트랜더링/ConfirmDialog';
+import Clock from './04.엘리먼트랜더링/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+setInterval(() =>{
+  root.render(
   <React.StrictMode>
     {/* <Library /> */}
-    <ConfirmDialog />
+    {/* <ConfirmDialog /> */}
+    <Clock />
   </React.StrictMode>
 );
+}, 1000)
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
