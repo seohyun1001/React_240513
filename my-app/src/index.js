@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   )
 // }, 1000)
 
-  root.render(
+root.render(
   <React.StrictMode>
     {/* <Library /> */}
     {/* <ConfirmDialog /> */}

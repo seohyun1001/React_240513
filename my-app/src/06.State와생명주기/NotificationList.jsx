@@ -41,7 +41,7 @@ class NotificationList extends React.Component {
     }
 
     componentWillUnmount() {
-        if(timer) {
+        if (timer) {
             clearInterval(timer)
         }
     }
@@ -50,7 +50,7 @@ class NotificationList extends React.Component {
         return (
             <div>
                 {this.state.notifications.map((notification) => {
-                    return <Notification message = {notification.message} />
+                    return <Notification message={notification.message} />
                 })}
             </div>
         )
