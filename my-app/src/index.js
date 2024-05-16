@@ -9,6 +9,7 @@ import ConfirmDialog from './04.엘리먼트랜더링/ConfirmDialog';
 import Clock from './04.엘리먼트랜더링/Clock';
 import PropsEx from './05.컴포넌트와props/PropsEx';
 import CommentList from './05.컴포넌트와props/CommentList';
+import BoardList from './05.컴포넌트와props_게시판/BoardList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,7 +26,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     {/* <Library /> */}
     {/* <ConfirmDialog /> */}
     {/* <PropsEx /> */}
-    <CommentList />
+    {/* <CommentList /> */}
+    <BoardList />
   </React.StrictMode>
 )
 
