@@ -14,6 +14,7 @@ import NotificationList from './06.State와생명주기/NotificationList';
 import Counter from './07.Hooks/Counter';
 import Info from './07.Hooks/info';
 import Average from './07.Hooks/Average';
+import Accommodate from './07.Hooks/Accommodate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -37,7 +38,9 @@ root.render(
     {/* <NotificationList /> */}
     {/* <Counter/> */}
     {/* <Info /> */}
-    <Average />
+    {/* <Average /> */}
+
+    <Accommodate />
 
   </React.StrictMode>
 )
