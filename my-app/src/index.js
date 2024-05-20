@@ -18,6 +18,8 @@ import Accommodate from './07.Hooks/Accommodate';
 import Say from './08.이벤트핸들링/Say';
 import Toggle from './08.이벤트핸들링/Toggle';
 import Toggle2 from './08.이벤트핸들링/Toggle2';
+import ConfirmButton from './08.이벤트핸들링/ConfirmButton';
+import EventPractice from './08.이벤트핸들링/EventPractice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -48,7 +50,9 @@ root.render(
 {/* 8장 */}
     {/* <Say /> */}
     {/* <Toggle /> */}
-    <Toggle2 />
+    {/* <Toggle2 /> */}
+    {/* <ConfirmButton /> */}
+    <EventPractice />
     
 
   </React.StrictMode>
