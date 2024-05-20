@@ -32,9 +32,9 @@ root.render(
     {/* <CommentList /> */}
     {/* <BoardList /> */}
     {/* <NotificationList /> */}
-    {/* <Counter/> */}
+    <Counter/>
 
-    <Info />
+    {/* <Info /> */}
   </React.StrictMode>
 )
 
