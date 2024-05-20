@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [visible, serVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   return (
     // <div className="App">
