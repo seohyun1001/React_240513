@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 
 const getAverage = numbers => {
     console.log("평균값 계산 중");
@@ -11,6 +11,13 @@ const getAverage = numbers => {
 function Average(props) {
     const [list, setList] = useState([]);
     const [number, setNumber] = useState('');
+    const inputEl = useRef(null);
+    // useRef를 사용하여 Average 컴퍼넌트에서 등록 버튼 클릭 시 포커스가 자동으로 input에 맞춤 
+    // useRef : 레퍼런스를 사용하기 위한 훅
+    // useRef() 혹은 레퍼런스 객체(ref object)를 반환함
+    // .current라는 속성은 현재 레퍼런스(참조)하고 있는 엘리먼트를 의미
+    // 사용법 : refContainer = useRef(초기값);
+    // useRef() Hook은 내부의 데이터가 변경되었을 때 별도로 알리지 않음
 
     // const onChange = e => {
     //     setNumber(e.target.value);
@@ -31,6 +38,7 @@ function Average(props) {
         const nextList = list.concat(parseInt(number));
         setList(nextList);
         setNumber('');
+        inputEl.current.focus();
     }, [number, list]); // number 혹은 list가 변경될 때만 함수 생성
 
     // useMemo 적용 전 : 숫자 입력과 등록에 getAverage() 함수 적용
@@ -41,7 +49,7 @@ function Average(props) {
 
     return (
         <div>
-            <input value={number} onChange={onChange} />
+            <input value={number} onChange={onChange} ref={inputEl}/>
             <button onClick={onInsert}>등록</button>
             <ul>
                 {list.map((value, index) => (
