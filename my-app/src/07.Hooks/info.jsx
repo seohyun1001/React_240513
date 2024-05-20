@@ -1,16 +1,18 @@
 import React, {useEffect, useReducer, useState} from "react";
+import useInputs from "./useInputs";
 
-function reducer(state, action){
-    return {
-        ...state,
-        [action.name] : action.value
-    };
-}
+// function reducer(state, action){
+//     return {
+//         ...state,
+//         [action.name] : action.value
+//     };
+// }
+// -> useInputs에 추가함
 
-function Info(props) {
+function Info() {
     // const [name, setName] = useState('');
     // const [nickname, setNickname] = useState('');
-    const [state, dispatch] = useReducer(reducer, {
+    const [state, onChange] = useInputs({
         name:'',
         nickname:'',
         phone:'',
@@ -18,9 +20,9 @@ function Info(props) {
 
     const {name, nickname, phone} = state;
 
-    const onChange = e => {
-        dispatch(e.target);
-    }
+    // const onChange = e => {
+    //     dispatch(e.target);
+    // }
 
     useEffect( () => {
         console.log("랜더링 완료");
