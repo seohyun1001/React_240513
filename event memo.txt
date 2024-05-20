@@ -11,3 +11,10 @@
      MyComponent 클릭하면 doSomething 실행하는 것이 아니라
       onClick인 props를 MyComponent에 전달한다는 의미
         <div onClick={this.props.onClick}>{/* (…) */}<div>
+
+
+
+Event Handler
+ 이벤트 처리 함수
+ 어떤 사건이 발생하면,처리하는 역할
+ 이벤트가 발생하는 것을 계속 듣고 있다는 의미로 이벤트 리스너(Event Listener) 라고 함

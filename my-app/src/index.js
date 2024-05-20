@@ -16,6 +16,8 @@ import Info from './07.Hooks/info';
 import Average from './07.Hooks/Average';
 import Accommodate from './07.Hooks/Accommodate';
 import Say from './08.이벤트핸들링/Say';
+import Toggle from './08.이벤트핸들링/Toggle';
+import Toggle2 from './08.이벤트핸들링/Toggle2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -44,7 +46,10 @@ root.render(
     {/* <Accommodate /> */}
 
 {/* 8장 */}
-    <Say />
+    {/* <Say /> */}
+    {/* <Toggle /> */}
+    <Toggle2 />
+    
 
   </React.StrictMode>
 )
