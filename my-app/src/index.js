@@ -31,11 +31,12 @@ root.render(
     {/* <ConfirmDialog /> */}
     {/* <PropsEx /> */}
     {/* <CommentList /> */}
+
     {/* <BoardList /> */}
     {/* <NotificationList /> */}
-    <Counter/>
+    {/* <Counter/> */}
+    <Info />
 
-    {/* <Info /> */}
   </React.StrictMode>
 )
 
