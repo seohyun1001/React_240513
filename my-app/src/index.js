@@ -15,6 +15,7 @@ import Counter from './07.Hooks/Counter';
 import Info from './07.Hooks/info';
 import Average from './07.Hooks/Average';
 import Accommodate from './07.Hooks/Accommodate';
+import Say from './08.이벤트핸들링/Say';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -40,7 +41,10 @@ root.render(
     {/* <Info /> */}
     {/* <Average /> */}
 
-    <Accommodate />
+    {/* <Accommodate /> */}
+
+{/* 8장 */}
+    <Say />
 
   </React.StrictMode>
 )

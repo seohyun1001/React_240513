@@ -1,0 +1,13 @@
+이벤트 사용할 때 주의 사항
+ 이벤트 이름은 카멜 표기법으로 작성
+     예 : html : onclick, onkeyup => 리액트 : onClick, onKeyUp
+
+ 이벤트에 실행할 자바스크립트 코드를 전달하는 것이 아니라, 함수 형태의 값을 전달
+
+ DOM 요소에만 이벤트 실행 가능
+     div, button, input, form, span 이벤트 설정 가능
+     사용자가 생성한 컴포넌트에는 이벤트를 자체적으로 설정할 수 없음
+        <MyComponent onClick={doSomething} />
+     MyComponent 클릭하면 doSomething 실행하는 것이 아니라
+      onClick인 props를 MyComponent에 전달한다는 의미
+        <div onClick={this.props.onClick}>{/* (…) */}<div>
