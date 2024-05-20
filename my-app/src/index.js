@@ -11,6 +11,7 @@ import PropsEx from './05.컴포넌트와props/PropsEx';
 import CommentList from './05.컴포넌트와props/CommentList';
 import BoardList from './05.컴포넌트와props_게시판/BoardList';
 import NotificationList from './06.State와생명주기/NotificationList';
+import Counter from './07.Hooks/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,8 +30,9 @@ root.render(
     {/* <PropsEx /> */}
     {/* <CommentList /> */}
     {/* <BoardList /> */}
+    {/* <NotificationList /> */}
 
-    <NotificationList />
+    <Counter/>
   </React.StrictMode>
 )
 
