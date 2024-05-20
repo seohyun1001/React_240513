@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 const getAverage = numbers => {
     console.log("평균값 계산 중");
@@ -22,6 +22,12 @@ function Average(props) {
         setNumber('');
     }
 
+    // useMemo 적용 전 : 숫자 입력과 등록에 getAverage() 함수 적용
+    // -> 입력만 해도 랜더링이 됨
+    const avg = useMemo(() => getAverage(list), [list]);
+    // useMemo Hook 적용 후
+    // : 랜더링 하는 과정에 특정 값이 변경되었을 때만 연산을 수행, 연산 최적화가 됨
+
     return (
         <div>
             <input value={number} onChange={onChange} />
@@ -31,7 +37,7 @@ function Average(props) {
                     <li key={index}>{value}</li>
                 ))}
             </ul>
-            <div><b>평균값 : </b>{getAverage(list)}</div>
+            <div><b>평균값 : </b>{avg}</div>
         </div>
     )
 
