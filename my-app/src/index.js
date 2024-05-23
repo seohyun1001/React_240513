@@ -24,6 +24,8 @@ import Greeting from './09.조건부랜더링/Greeting';
 import LoginControl from './09.조건부랜더링/LoginControl';
 import MainPage from './09.조건부랜더링/MainPage';
 import LandingPage from './09.조건부랜더링/LandingPage';
+import NumberList from './10.리스트와 키/NumberList';
+import StudentList from './10.리스트와 키/StudentList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -62,7 +64,11 @@ root.render(
     {/* <Greeting /> */}
     {/* <LoginControl /> */}
     {/* <MainPage /> */}
-    <LandingPage />
+    {/* <LandingPage /> */}
+
+{/* 10장 */}
+    {/* <NumberList /> */}
+    <StudentList />
     
 
   </React.StrictMode>
