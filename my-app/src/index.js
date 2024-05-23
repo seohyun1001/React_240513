@@ -26,6 +26,7 @@ import MainPage from './09.조건부랜더링/MainPage';
 import LandingPage from './09.조건부랜더링/LandingPage';
 import NumberList from './10.리스트와 키/NumberList';
 import StudentList from './10.리스트와 키/StudentList';
+import InterationSample from './10.리스트와 키/InterationSample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -68,7 +69,8 @@ root.render(
 
 {/* 10장 */}
     {/* <NumberList /> */}
-    <StudentList />
+    {/* <StudentList /> */}
+    <InterationSample />
     
 
   </React.StrictMode>
