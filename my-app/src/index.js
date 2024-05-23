@@ -23,6 +23,7 @@ import EventPractice from './08.이벤트핸들링/EventPractice';
 import Greeting from './09.조건부랜더링/Greeting';
 import LoginControl from './09.조건부랜더링/LoginControl';
 import MainPage from './09.조건부랜더링/MainPage';
+import LandingPage from './09.조건부랜더링/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -60,7 +61,8 @@ root.render(
 {/* 9장 */}
     {/* <Greeting /> */}
     {/* <LoginControl /> */}
-    <MainPage />
+    {/* <MainPage /> */}
+    <LandingPage />
     
 
   </React.StrictMode>
