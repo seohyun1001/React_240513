@@ -24,12 +24,18 @@ function LoginControl(props) {
     }
 
     let button;
-    if (isLoggedIn) {
-        button = <LogoutButton onClick = {handleLogoutClick} />
-    
-    } else {
-        button = <LoginButton onClick = {handleLoginClick} />
+
+    {
+        button = isLoggedIn
+        ? <LogoutButton onClick = {handleLogoutClick} />
+        : <LoginButton onClick = {handleLoginClick} />
     }
+    // if (isLoggedIn) {
+    //     button = <LogoutButton onClick = {handleLogoutClick} />
+    
+    // } else {
+    //     button = <LoginButton onClick = {handleLoginClick} />
+    // }
 
     return (
         <div>

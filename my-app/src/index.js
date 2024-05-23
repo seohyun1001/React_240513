@@ -22,6 +22,7 @@ import ConfirmButton from './08.이벤트핸들링/ConfirmButton';
 import EventPractice from './08.이벤트핸들링/EventPractice';
 import Greeting from './09.조건부랜더링/Greeting';
 import LoginControl from './09.조건부랜더링/LoginControl';
+import MainPage from './09.조건부랜더링/MainPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -58,7 +59,8 @@ root.render(
 
 {/* 9장 */}
     {/* <Greeting /> */}
-    <LoginControl />
+    {/* <LoginControl /> */}
+    <MainPage />
     
 
   </React.StrictMode>
