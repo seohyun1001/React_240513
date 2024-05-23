@@ -21,6 +21,7 @@ import Toggle2 from './08.이벤트핸들링/Toggle2';
 import ConfirmButton from './08.이벤트핸들링/ConfirmButton';
 import EventPractice from './08.이벤트핸들링/EventPractice';
 import Greeting from './09.조건부랜더링/Greeting';
+import LoginControl from './09.조건부랜더링/LoginControl';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -56,7 +57,8 @@ root.render(
     {/* <EventPractice /> */}
 
 {/* 9장 */}
-    <Greeting />
+    {/* <Greeting /> */}
+    <LoginControl />
     
 
   </React.StrictMode>
