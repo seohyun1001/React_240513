@@ -33,8 +33,10 @@ import WelcomeDialog from './13.합성vs상속/WelcomeDialog';
 import ProfileCard from './13.합성vs상속/ProfileCard';
 import Maintest from './14.컨택스트/MainTest';
 import ThemeTest from './14.컨택스트/ThemeTest';
-import MainTest from './14.컨택스트/MainTest';
+import MainTesst from './14.컨택스트/MainTest';
 import DarkOrLight from './14.컨택스트/DarkOrLight';
+import Blocks from './15.스타일링/Blocks';
+import MainPage2 from './15.스타일링/MainPage2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -91,7 +93,11 @@ root.render(
 {/* 14장 */}
     {/* <ThemeTest/> */}
     {/* <MainTest/> */}
-    <DarkOrLight/>
+    {/* <DarkOrLight/> */}
+
+{/* 15장 */}
+    <MainPage2/>
+    {/* <Blocks/> */}
     
 
   </React.StrictMode>
