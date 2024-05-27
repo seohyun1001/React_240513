@@ -34,6 +34,7 @@ import ProfileCard from './13.합성vs상속/ProfileCard';
 import Maintest from './14.컨택스트/MainTest';
 import ThemeTest from './14.컨택스트/ThemeTest';
 import MainTest from './14.컨택스트/MainTest';
+import DarkOrLight from './14.컨택스트/DarkOrLight';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -89,7 +90,8 @@ root.render(
 
 {/* 14장 */}
     {/* <ThemeTest/> */}
-    <MainTest/>
+    {/* <MainTest/> */}
+    <DarkOrLight/>
 
 
     
