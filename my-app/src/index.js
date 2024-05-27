@@ -29,6 +29,11 @@ import StudentList from './10.리스트와 키/StudentList';
 import InterationSample from './10.리스트와 키/InterationSample';
 import BoardItemList from './10.리스트와 키/BoardItemList';
 import Calculator from './12.State끌어올리기/Calculator';
+import WelcomeDialog from './13.합성vs상속/WelcomeDialog';
+import ProfileCard from './13.합성vs상속/ProfileCard';
+import Maintest from './14.컨택스트/MainTest';
+import ThemeTest from './14.컨택스트/ThemeTest';
+import MainTest from './14.컨택스트/MainTest';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -76,7 +81,16 @@ root.render(
     {/* <BoardItemList /> */}
 
 {/* 12장 */}
-    <Calculator />
+    {/* <Calculator /> */}
+
+{/* 13장 */}
+    {/* <WelcomeDialog /> */}
+    {/* <ProfileCard/> */}
+
+{/* 14장 */}
+    {/* <ThemeTest/> */}
+    <MainTest/>
+
 
     
 
