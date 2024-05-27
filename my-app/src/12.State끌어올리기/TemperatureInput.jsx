@@ -6,10 +6,14 @@ const scaleNames = {
 };
 
 function TemperatureInput(props) {
-    const [temperature, setTemperature] = useState('');
+    // const [temperature, setTemperature] = useState('');
+
+    // const handleChange = (event) => {
+    //     setTemperature(event.target.value);
+    // };
 
     const handleChange = (event) => {
-        setTemperature(event.target.value);
+        props.onTemperatureChange(event.target.value);
     };
 
     return (
@@ -17,7 +21,7 @@ function TemperatureInput(props) {
             <legend>
                 온도를 입력해주세요(단위:{scaleNames[props.scale]}):
             </legend>
-            <input value={temperature} onChange={handleChange} />
+            <input value={props.temperature} onChange={handleChange} />
         </fieldset>
     );
 }
