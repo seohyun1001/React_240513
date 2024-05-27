@@ -27,11 +27,9 @@ function BoardItemList(props) {
     const [inputContent, setInputContent] = useState('');
     const [nextId, setNextId] = useState(3);
 
-    const onChange = e => {
-        setInputName(e.target.inputName)
-        setInputTitle(e.target.inputTitle)
-        setInputContent(e.target.inputContent)
-    }
+    const onChangeName = e => setInputName(e.target.value);
+    const onChangeTitle = e => setInputTitle(e.target.value);
+    const onChangeContent = e => setInputContent(e.target.value);
 
     const onClick = () =>{
         const nextBoards = boards.concat({
@@ -59,9 +57,9 @@ function BoardItemList(props) {
 
     return (
         <>
-        <input value={inputName} onChange={onChange} />
-        <input value={inputTitle} onChange={onChange} />
-        <input value={inputContent} onChange={onChange} />
+        <input value={inputName} onChange={onChangeName} />
+        <input value={inputTitle} onChange={onChangeTitle} />
+        <input value={inputContent} onChange={onChangeContent} />
         <button onClick={onClick}>추가</button>
         <div>{boardList}</div>
         </>
