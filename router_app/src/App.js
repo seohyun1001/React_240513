@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { Link, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />}/>
         <Route path="/info" element={<About />}/>
         {/* Route 하나에 여러 개의 path 설정하기 */}
+        <Route path="/profile/:username" element={<Profile />} />
       </Routes>  
     </div>
   );
