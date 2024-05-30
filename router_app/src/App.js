@@ -11,12 +11,15 @@ function App() {
     <div>
       <ul>
         <li><Link to="/">홈</Link></li>
-        <li><Link to="/About">소개</Link></li>
+        <li><Link to="/about">소개</Link></li>
+        <li><Link to="/info">info</Link></li>
       </ul>
       <hr/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
+        <Route path="/info" element={<About />}/>
+        {/* Route 하나에 여러 개의 path 설정하기 */}
       </Routes>  
     </div>
   );
