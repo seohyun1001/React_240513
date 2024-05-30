@@ -24,7 +24,10 @@ function Profile(props){
     const profile = data[username]
 
     if(!profile){
-        return <div>존재하지 않는 사용자입니다.</div>
+        return <div>존재하지 않는 사용자입니다.
+            <button onClick={() => navigate("/")}>뒤로 가기</button>
+        </div>
+        
     }
 
     return (
