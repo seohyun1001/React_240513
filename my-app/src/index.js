@@ -37,6 +37,7 @@ import MainTesst from './14.컨택스트/MainTest';
 import DarkOrLight from './14.컨택스트/DarkOrLight';
 import Blocks from './15.스타일링/Blocks';
 import MainPage2 from './15.스타일링/MainPage2';
+import FetchAxios from './18.비동기통신/FetchAxios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -96,8 +97,11 @@ root.render(
     {/* <DarkOrLight/> */}
 
 {/* 15장 */}
-    <MainPage2/>
+    {/* <MainPage2/> */}
     {/* <Blocks/> */}
+
+{/* 18장 */}
+    <FetchAxios />
     
 
   </React.StrictMode>
