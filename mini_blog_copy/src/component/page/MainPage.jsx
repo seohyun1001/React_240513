@@ -39,4 +39,6 @@ function MainPage(props){
             </Container>
         </Wrapper>
     )
-}export default MainPage;
+}
+
+export default MainPage;
