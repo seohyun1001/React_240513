@@ -47,16 +47,16 @@ const CommentLabel=styled.p`
 
 function PostViewPage(props){
     const navigate=useNavigate();
-    const {postId}=useParams ();
+    const {postId}=useParams();
     const post=data.find((item)=>{
-        return item.id=postId;
+        return item.id==postId;
     });
     const [comment, setComment]=useState("");
 
     return(
         <Wrapper>
             <Container>
-                <Button title="뒤로가기" onclick={()=>{navigate("/")}}/>
+                <Button title="뒤로가기" onClick={()=>{navigate("/")}}/>
                 <PostContainer>
                     <TitleText>{post.title}</TitleText>
                     <ContentText>{post.content}</ContentText>
