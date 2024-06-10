@@ -21,7 +21,21 @@ const Container=styled.div`
     }
 `;
 
-function PostWritePage(props){
+const PostWrite = ({onCreate}) => {
+    const [content, setContent] = useState("");
+    const onChangeContent = (e) => {
+        setContent(e.target.value);
+    };
+
+    return(
+        <div className="PostWrite">
+            <h4></h4>
+        </div>
+    )
+}
+
+function PostWritePage(props) {
+
     const navigate=useNavigate();
 
     const [title, setTitle]=useState("");

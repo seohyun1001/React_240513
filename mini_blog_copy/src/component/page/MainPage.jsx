@@ -24,7 +24,7 @@ const Container=styled.div`
 `;
 
 function MainPage(props){
-    const {}=props;
+    const {posts}=props;
     const navigate=useNavigate();
     return(
         <Wrapper>
