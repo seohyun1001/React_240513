@@ -7,32 +7,13 @@ import { Modal } from 'bootstrap';
 import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 
+
+
 function App() {
-  const [movies, setMovies] = useState([
-  //   {
-  //     Title: "The Amazing Spider-Man",
-  //     Year: "2012",
-  //     imdbID: "tt0948470",
-  //     Type: "movie",
-  //     Poster: "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_SX300.jpg"
-  //   },
-  //   {
-  //     Title: "The Amazing Spider-Man 2",
-  //     Year: "2014",
-  //     imdbID: "tt1872181",
-  //     Type: "movie",
-  //     Poster: "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_SX300.jpg"
-  //   },
-  //   {
-  //     Title: "The Amazing World of Gumball",
-  //     Year: "2011–2019",
-  //     imdbID: "tt1942683",
-  //     Type: "series",
-  //     Poster: "https://m.media-amazon.com/images/M/MV5BYWU1YTA4OGUtNjcxMC00ZTllLTgxYWUtY2U5NmViZTU0MmNjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_SX300.jpg"
-  //   }
-  ])
+  const [movies, setMovies] = useState([])
 
   const [searchValue, setSearchValue] = useState('');
+  const [favorites, setFavorites] = useState([]);
 
   const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=c8b645f7`;
@@ -48,21 +29,37 @@ function App() {
   };
 
   useEffect(() => {
-    if (searchValue.length > 3) {
-      getMovieRequest(searchValue);
+    const movieFavorites = JSON.parse(localStorage.getItem('favorites'));
+    if (movieFavorites) {
+      setFavorites(movieFavorites);
     }
-  }, [searchValue]);
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('favorites', JSON.stringify(items));
+  };
+
+  const addFavoriteMovie = (movie) => {
+    const newList = [...favorites, movie];
+    setFavorites(newList);
+    saveToLocalStorage(newList);
+  };
 
 
 
   return (
     <div className='container-fluid movie-app'>
       <div className='row align-items-center my-4'>
-        <MovieListHeading heading='Movies' />
+        <MovieListHeading heading='영화 검색과 선호작 등록' />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-      <div className="row">
-        <MovieList movies={movies} />
+
+      <div className="row scroll-container">
+        <MovieList movies={movies} handleClick={addFavoriteMovie} />
+      </div>
+
+      <div className='row align-items-center my-4'>
+        <MovieListHeading heading='내 선호작' />
       </div>
     </div>
   );
