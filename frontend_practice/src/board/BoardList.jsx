@@ -35,17 +35,15 @@ function BoardList() {
                     </tr>
                 </thead>
                 {boards.map((board, index) => (
+                    
                     <tr key={index}>
                         <th scope="row">{index + 1}</th>
-                        <th>{board.title}</th>
+                        <Link to={`/viewboard/${board.bno}`}>
+                        <th>{board.title}</th></Link>
                         <th>{board.content}</th>
                         <th>{board.writer}</th>
                         <th>{board.hit}</th>
-                        <th>
-                            <button className="btn btn-outline-secondary mx-2">보기</button>
-                            <Link to={`/edituser/${board.bno}`} className="btn btn-outline-warning mx-2">수정</Link>
-                            {/* <button onClick={() => deleteUser(user.id)} className="btn btn-outline-danger mx-2">삭제</button> */}
-                        </th>
+                        
                     </tr>
                 ))}
             </table>

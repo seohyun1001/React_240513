@@ -42,8 +42,9 @@ function Home() {
             <th>{user.email}</th>
             <th>
               <button className="btn btn-outline-secondary mx-2">보기</button>
-              <Link to={`/edituser/${user.id}`} className="btn btn-outline-warning mx-2">수정</Link>
-              <button onClick={() => deleteUser(user.id)} className="btn btn-outline-danger mx-2">삭제</button>
+              <Link to={`/edituser/${user.id}`} className="btn btn-outline-warning px-3 mx-2">수정</Link>
+              <button onClick={() => deleteUser(user.id)} className="btn btn-outline-danger px-3 mx-2">삭제</button>
+              
             </th>
           </tr>
         ))}
