@@ -11,7 +11,7 @@ const SearchBox = (props) => {
                 className='form-control'
                 value={props.searchValue}
                 onChange={handleChange}
-                placeholder='영화 검색...'
+                placeholder="영화 검색..."
             />
         </div>
     );
