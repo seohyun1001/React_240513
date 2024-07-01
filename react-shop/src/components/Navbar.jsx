@@ -1,9 +1,22 @@
 import logo from '../logo.svg';
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { Role } from '../models/Role';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCurrentUser } from '../store/actions/user';
+
+
 
 
 const Navbar = () => {
+	const currentUser = useSelector((state) => state.user);
+
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const logout = () => {
+		dispatch(clearCurrentUser());
+		navigate('/login')
+	}
+
 	return (
 		<nav className='navbar navbar-expand navbar-dark bg-dark'>
 			<a href='https://react.dev' className='navbar-brand ms-1'>
@@ -11,12 +24,13 @@ const Navbar = () => {
 				React
 			</a>
 			<div className='navbar-nav me-auto'>
-
+				{currentUser?.role === Role.ADMIN &&
 					<li className='nav-item'>
 						<NavLink to="/admin" href='##' className='nav-link'>
 							관리자
 						</NavLink>
 					</li>
+				}
 				
 				<li className='nav-item'>
 					<NavLink to="/home" href='##' className='nav-link'>
@@ -25,6 +39,8 @@ const Navbar = () => {
 
 				</li>
 			</div>
+
+			{!currentUser && (
 			<div className='navbar-nav ms-auto me-5'>
 				<li className='nav-item'>
 					<NavLink to="/login" href='##' className='nav-link'>
@@ -37,6 +53,21 @@ const Navbar = () => {
 					</NavLink>
 				</li>
 			</div>
+			)}
+			{currentUser && (
+				<div className='navbar-nav ms-auto me-5'>
+					<li className='nav-item'>
+						<NavLink to="/profile" className="nav-link">
+							{currentUser.name}
+						</NavLink>
+					</li>
+					<li className='nav-item'>
+						<a href="##" className='nav-link' onClick={logout}>
+							로그아웃
+						</a>
+					</li>
+				</div>
+			)}
 		</nav>
 	);
 };

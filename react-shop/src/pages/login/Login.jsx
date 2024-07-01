@@ -62,17 +62,7 @@ const Login = () => {
     setLoading(false);
   }
 
-  // const Navbar = () => {
-  //   const currentUser = useSelector((state) => state.user);
 
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-
-  //   const logout = () => {
-  //     dispatch(clearCurrentUser());
-  //     navigate('/login');
-  //   };
-  // }
 
   return (
     <div className='container mt-5'>

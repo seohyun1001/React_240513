@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import Admin from './pages/admin/Adimin';
+import Admin from './pages/admin/Admin';
 import NotFound from './pages/not-found/NotFound';
 import UnAuthorized from './pages/unauthorized/UnAuthorized';
 
