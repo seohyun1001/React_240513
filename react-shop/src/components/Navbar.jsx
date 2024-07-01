@@ -54,6 +54,7 @@ const Navbar = () => {
 				</li>
 			</div>
 			)}
+			
 			{currentUser && (
 				<div className='navbar-nav ms-auto me-5'>
 					<li className='nav-item'>

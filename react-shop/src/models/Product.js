@@ -7,3 +7,4 @@ export default class Product {
       this.id = id;
   }
 }
+
